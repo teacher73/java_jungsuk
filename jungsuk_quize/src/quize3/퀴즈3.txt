@@ -1,0 +1,186 @@
+[문제3] 문제2_3에서 완성된 코드를 이용해서, 문제의 순서를 임의로 바꾸고, 선택지도 임의로 바뀌어 출력되도록 하세요.
+         
+void shuffle(String[] data) - 주어진 문자열배열의 각 요소의 순서를 임으로 뒤바꾼다.
+
+[예제 QuestionEntity.java]
+
+public class QuestionEntity {
+	private String exam;
+	private int solution;
+	private String[] selection;
+	
+	public QuestionEntity() { }
+
+	public QuestionEntity(String exam, int solution, String[] selection) {
+		this.exam = exam;
+		this.solution = solution;
+		this.selection = selection;
+	}
+
+	public String getExam() {
+		return exam;
+	}
+
+	public void setExam(String exam) {
+		this.exam = exam;
+	}
+
+	public int getSolution() {
+		return solution;
+	}
+
+	public void setSolution(int solution) {
+		this.solution = solution;
+	}
+
+	public String[] getSelection() {
+		return selection;
+	}
+
+	public void setSelection(String[] selection) {
+		this.selection = selection;
+	}
+	
+}
+
+[예제QuizEntityList.java]
+public class QuestionEntityList {
+	
+	private QuestionEntity question;
+	private ArrayList<QuestionEntity> qList;
+	int score;
+
+	
+	public QuestionEntityList() {
+		qList = new ArrayList<QuestionEntity>();
+	}
+
+	public void addExam(String data){
+		String[] examString = data.split("`", 3);
+		String exam = examString[0];
+		int solution = Integer.parseInt(examString[1]);
+		String[] selection = examString[2].split("`");
+		
+		qList.add(new QuestionEntity(exam, solution, selection));
+	}
+	
+	public void rndMakeQuestions(){
+		Scanner sc = new Scanner(System.in);
+		/* 
+           	Collections를 이용하여 qList에 있는 내용을 섞으시오
+		*/
+		
+		for(int i=0; i<qList.size(); i++){
+			question = qList.get(i);
+			System.out.println("["+(i+1)+"] " + question.getExam());
+			String[] selection = question.getSelection();
+			
+			ArrayList<String> sels = new ArrayList<String>();
+			
+			/* ArrayList sels에 Collections를 이용하여 배열을 List로 변환하시오. 
+			
+			*/
+
+			/* 답지를 섞으시오.
+ 			
+ 			*/
+				
+			/* 정답의 문자를 저장하세요
+			
+ 			*/
+			/* 바뀐 답지에 의한 정답을 변경하세요 
+
+			*/
+			
+			for(int j=0; j<sels.size(); j++){
+		  		  System.out.print(j+1+". " + sels.get(j)+"\t");
+			}
+			
+			System.out.println(); 
+			System.out.print("[답]"); 
+			
+            int input = sc.nextInt();
+            question.setUserSolution(input);
+
+			System.out.println();
+		}
+		sc.close();
+	}
+	
+	public void makeQuestions(){
+		Scanner sc = new Scanner(System.in);
+
+		for(int i=0; i<qList.size(); i++){
+			question = qList.get(i);
+			System.out.println("["+(i+1)+"] " + question.getExam());
+			String[] selection = question.getSelection();
+
+			for(int j=0; j<selection.length; j++){
+		  		  System.out.print(j+1+". " + selection[j]+"\t");
+			}
+
+			System.out.println(); 
+			System.out.print("[답]"); 
+			
+            int input = sc.nextInt();
+            question.setUserSolution(input);
+
+			System.out.println();
+		}
+		sc.close();
+	}
+	
+	public void evalExam(){
+		for(int i=0; i<qList.size(); i++){
+			question = qList.get(i);
+			if (question.getUserSolution()==question.getSolution()){
+				score++;
+			}
+		}
+		System.out.println("정답개수/전체문항수 : " + score+"/"+qList.size());
+		System.out.println();
+	}
+}
+
+
+[예제QuizEx2_3.java]
+public class QuizEx2_3 {
+	
+		public static void main(String[] args){
+		String[] data = { 
+            "다음 중 키워드가 아닌 것은?`2`final`True`if`public", 
+            "다음 중 자바의 연산자가 아닌 것은?`5`&`|`++`!=`/`^", 
+            "다음 중 메서드의 반환값이 없음을 의미하는 키워드는?`1`void`null`false", 
+		}; 
+		
+		QuestionEntityList questionList= new QuestionEntityList();
+		for(int i=0; i<data.length;i++){
+			questionList.addExam(data[i]);
+		}
+
+		questionList.rndMakeQuestions();
+		questionList.evalExam();
+		
+	} // main 
+
+}
+ 
+
+[실행결과]
+
+[1] 다음 중 키워드가 아닌 것은?
+1. True	2. final	3. public	4. if	
+[답]1
+
+[2] 다음 중 자바의 연산자가 아닌 것은?
+1. ++	2. !=	3. /	4. &	5. |	6. ^	
+[답]3
+
+[3] 다음 중 메서드의 반환값이 없음을 의미하는 키워드는?
+1. null	2. void	3. false	
+[답]2
+
+정답개수/전체문항수 : 3/3
+
+[작성자]- 김민수
+
