@@ -1,35 +1,38 @@
+/**
+ *
+ * @package		: lotto_create
+ * @FileName	: Lotto.java
+ * @Date  		: 2012. 9. 11.
+ * @version  	: 1.0.0
+ * @author  	: MinSu Kim (net94@nate.com)
+ * @Comment  	: 로또 생성 클래스 
+ * 
+ */
+
 package lotto_create;
 
 import java.util.Random;
 
-
-// TODO: Auto-generated Javadoc
 /**
- * <pre>
- * lotto_create
- *   |_ Lotto.java
- * </pre>
- * 
- * Desc : 로또 번호 생성
- * @Company 	: saeildamil
- * @author  	: MinSu Kim
- * @Date  		: 2012. 9. 10. 오후 10:38:56
- * @version  	: 1.0.0
+ * 로또 생성 클래스 
+ * @author	MinSu Kim (net94@nate.com)
+ * @since	2012. 9. 11. 오전 12:43:51
+ * @version	1.0.0
  */
+
 public class Lotto {
-	
-	/** The lotto. */
+	/** 
+	 * 로또 생성 유무 표시 배열 
+	 */
 	private boolean[] lotto;	
 	
-	/** The arr size. */
 	private int arrSize;
 	
-	/** The num size. */
 	private int numSize;
 	
 	/**
-	 * Desc : Constructor of Lotto.java class
-	 * @param arrSize 로또번호 생성사이즈 45
+	 * Constructor of Lotto.java class
+	 * @param arrSize 로또번호 생성사이즈 ex) 45
 	 * @param numSize 번호 생성 횟수
 	 */
 
@@ -41,9 +44,7 @@ public class Lotto {
 	}
 	
 	/**
-	 * Desc	: 로또 번호 배열 초기화.
-	 *
-	 * @Method Name  	: initLotto
+	 * 로또 번호 배열 초기화.
 	 */
 	
 	public void initLotto(){
@@ -54,10 +55,8 @@ public class Lotto {
 	
 	/**
 	 * 로또 번호 생성.
-	 *
-	 * @Method Name  	: createNum
-	 * @Method Comment  : 로또 번호 생성
 	 */
+	
 	
 	public void createNum(){
 		Random random = new Random();
@@ -71,9 +70,6 @@ public class Lotto {
 	
 	/**
 	 * 로또 번호 출력.
-	 *
-	 * @Method Name  	: prnLotto
-	 * @Method Comment  :
 	 */
 	
 	public void prnLotto(){
@@ -82,12 +78,9 @@ public class Lotto {
 		}
 		System.out.println();
 	}
-
+	
 	/**
 	 * 번호생성 메소드.
-	 *
-	 * @Method Name  	: lottoFactory
-	 * @Method Comment  :
 	 */
 	
 	public void lottoFactory(){
@@ -97,5 +90,4 @@ public class Lotto {
 		prnLotto();
 		initLotto();
 	}
-
 }
