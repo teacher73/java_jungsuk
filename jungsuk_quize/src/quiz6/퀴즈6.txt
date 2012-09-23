@@ -1,0 +1,4 @@
+[문제3] list를 다양한 기준으로 정렬하기 위해 Comaprator를 구현한 클래스를 구현하세요.
+ClassTotalComparator - 반별로 총점이 높은 순에서 낮은 순으로 정렬(반은 오름차순, 총점은 내림차순)
+ClassStudentNo - 반, 번호 순으로 내림차순 정렬
+
