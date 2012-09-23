@@ -13,7 +13,7 @@ public class SungJukEx1 {
 	public static void main(String[] args) { 
         ArrayList<Student> list = new ArrayList<Student>(); 
 
-       //                        이름, 반, 번호, 국어, 수학, 영어 
+       // 이름, 반, 번호, 국어, 수학, 영어 
         list.add(new Student("남궁성", 3,2,100,100,100)); 
         list.add(new Student("왕자바", 3,1,90,100,80)); 
         list.add(new Student("자바왕", 3,3,70,100,100)); 
