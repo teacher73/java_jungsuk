@@ -4,7 +4,7 @@
  * 작성 일자 		: 2012. 7. 6.
  * 작성자 		: 
 */
-package quize3;
+package quiz3;
 
 import java.util.ArrayList;
 import java.util.Collections;

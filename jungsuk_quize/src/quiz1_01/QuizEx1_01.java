@@ -1,4 +1,4 @@
-package quize1_01;
+package quiz1_01;
 
 import org.apache.log4j.Logger;
 

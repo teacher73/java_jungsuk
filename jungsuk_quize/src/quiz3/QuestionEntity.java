@@ -4,7 +4,7 @@
  * �ۼ� ���� 		: 2012. 7. 5.
  * �ۼ��� 		: 
 */
-package quize3;
+package quiz3;
 
 public class QuestionEntity {
 	private String exam;		//����

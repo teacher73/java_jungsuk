@@ -4,7 +4,7 @@
  * 작성 일자 		: 2012. 7. 12.
  * 작성자 		: 
 */
-package quize4;
+package quiz4;
 
 public class Student {
 	private String name;

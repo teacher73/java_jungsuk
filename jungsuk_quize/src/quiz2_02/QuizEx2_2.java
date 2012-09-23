@@ -4,7 +4,7 @@
  * 작성 일자 		: 2012. 7. 4.
  * 작성자 		: mskim
 */
-package quize2_02;
+package quiz2_02;
 
 import java.util.ArrayList;
 import java.util.Scanner;

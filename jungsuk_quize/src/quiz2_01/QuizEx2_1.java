@@ -4,7 +4,7 @@
  * 작성 일자 		: 2012. 7. 5.
  * 작성자 		: 
 */
-package quize2_01;
+package quiz2_01;
 
 import java.util.Scanner;
 

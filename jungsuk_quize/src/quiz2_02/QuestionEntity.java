@@ -1,6 +1,10 @@
-
-package quize1_02;
-
+/*
+ * QuizEx1 / Question.java
+ * ���α׷� ����	: ������ �����ϴ� EntityClass
+ * �ۼ� ���� 		: 2012. 7. 5.
+ * �ۼ��� 		: 
+*/
+package quiz2_02;
 
 public class QuestionEntity {
 	private String exam;
