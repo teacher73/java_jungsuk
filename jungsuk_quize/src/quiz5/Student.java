@@ -33,7 +33,6 @@ public class Student implements Comparable<Student>{
 		StringBuilder sb = new StringBuilder();
 		Formatter f = new Formatter(sb);
 		f.format("%5s\t%2d\t%2d\t%3d\t%3d\t%3d\t%3d", name,classNo,studentNo,koreanScore,mathScore,englishScore,total);
-		
 		return sb.toString();
 	}
 
