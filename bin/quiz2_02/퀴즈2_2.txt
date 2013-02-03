@@ -1,0 +1,100 @@
+[문제2_2] 문제2_1에서 완성된 코드에서 QuestionEntity클래스를 선언및 이용하여
+                          실행결과와 같이 출력하도록 코드를 완성하세요.
+
+[예제 QuestionEntity.java]
+
+public class QuestionEntity {
+	private String exam;
+	private String[] selection;
+	private int solution;
+	
+	public QuestionEntity(String examString) {
+		String[] data = examString.split("`", 3);
+		this.exam = data[0];
+		this.solution = Integer.parseInt(data[1]);
+		this.selection = data[2].split("`");
+	}
+
+	public String[] getSelection() {
+		return selection;
+	}
+
+	public String getExam() {
+		return exam;
+	}
+
+	public int getSolution() {
+		return solution;
+	}
+	
+}
+
+[예제QuizEx2.java]
+
+import java.util.*; 
+
+public class QuizEx2_2 {
+	
+	public static void main(String[] args){
+		
+		QuestionEntity question;
+		ArrayList<QuestionEntity> qList = new ArrayList<QuestionEntity>();
+		String[] data = { 
+            "다음 중 키워드가 아닌 것은?`2`final`True`if`public", 
+            "다음 중 자바의 연산자가 아닌 것은?`5`&`|`++`!=`/`^", 
+            "다음 중 메서드의 반환값이 없음을 의미하는 키워드는?`1`void`null`false", 
+		}; 
+		Scanner sc = new Scanner(System.in); 
+        int score = 0; 
+        
+		for(int i=0;i<data.length;i++) {
+			qList.add(new QuestionEntity(data[i]));
+		}
+		
+		for(int i=0; i<qList.size(); i++){
+			question = qList.get(i);
+			System.out.println("["+(i+1)+"] " + question.getExam());
+			String[] selection = question.getSelection();
+			for(int j=0; j<selection.length; j++){
+		  		  System.out.print(j+1+". " + selection[j]+"\t");
+			}
+			System.out.println(); 
+			
+            /* 
+            
+            	알맞은 코드를 넣으세요. 
+
+			*/
+			System.out.println();System.out.println();
+		}
+		sc.close();
+        // 알맞은 코드를 넣으세요.
+        
+
+	} // main 
+
+}
+
+ 
+
+[실행결과]
+
+[1] 다음 중 키워드가 아닌 것은?
+1.final 2.True  3.if    4.public
+[답]2
+
+
+[2] 다음 중 자바의 연산자가 아닌 것은?
+1.&     2.|     3.++    4.!=    5./     6.^
+[답]6
+
+
+[3] 다음 중 메서드의 반환값이 없음을 의미하는 키워드는?
+1.void  2.null  3.false
+[답]1
+
+
+정답개수/전체문항수 :3/3
+
+[작성자]- 김민수
+

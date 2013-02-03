@@ -1,0 +1,58 @@
+[문제1-1] 주어진 문자열 데이터를 가지고 실행결과와 같이 출력되도록 코드를 완성하세요.
+                     데이터의 형식은 문제, 답, 선택지의 순서로 되어 있으며 구분자는 `(숫자1옆의 키)입니다.
+
+[예제 QuestionEntity.java]
+public class QuestionEntity {
+	private String exam;
+	private String[] selection;
+	private int solution;
+	
+	// 1. 생성자를 이용하여 String클래스의 String[] split(String regex, int limit)를 사용해서 문제와 선택지 그리고 정답을
+		      각각의 멤버필드에 초기화하세요..
+	public QuestionEntity(String examString) {
+
+	}
+	// 2. getter메소드를 정의하세요.
+
+}//class QuestionEntity
+
+
+[예제QuizEx1.java]
+
+class QuizEx1 { 
+	public static void main(String[] args) { 
+		// 1. 문제및답안과선택지를 저장하는 Question클래스를 정의하고 선언하세요.
+
+		// 2. Question클래스들을 저장하는 ArrayList를 선언하세요.
+		
+		String[] data = { 
+            "다음 중 키워드가 아닌 것은?`2`final`True`if`public", 
+            "다음 중 자바의 연산자가 아닌 것은?`5`&`|`++`!=`/`^", 
+            "다음 중 메서드의 반환값이 없음을 의미하는 키워드는?`1`void`null`false", 
+		}; 
+		
+		for(int i=0;i<data.length;i++) {
+		// 3. Question클래스를 생성하여 ArrayList에 추가하세요.
+
+		}
+		
+		for(int i=0; i<qList.size(); i++){
+		// 4. ArrayList를 이용하여 문제와 선택지를 출력하세요.
+
+		}
+	} // main 
+} //class QuizEx1
+
+
+[실행결과]
+
+[1] 다음 중 키워드가 아닌 것은?
+1.final 2.True  3.if    4.public
+
+[2] 다음 중 자바의 연산자가 아닌 것은?
+1.&     2.|     3.++    4.!=    5./     6.^
+
+[3] 다음 중 메서드의 반환값이 없음을 의미하는 키워드는?
+1.void  2.null  3.false
+
+[작성자]- 김민수
