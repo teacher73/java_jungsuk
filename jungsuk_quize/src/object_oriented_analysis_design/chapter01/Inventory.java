@@ -27,7 +27,7 @@ public class Inventory {
 		guitars = new ArrayList<>();
 	}
 	
-	public void addGuitar(String serialNumber,String builder,String model,String type,String backWood,String topWood,double price){
+	public void addGuitar(String serialNumber,Builder builder,String model,Type type,Wood backWood,Wood topWood,double price){
 		Guitar guitar = new Guitar(serialNumber, builder, model, type, backWood, topWood, price);
 		guitars.add(guitar);
 	}
@@ -43,19 +43,19 @@ public class Inventory {
 	public Guitar search(Guitar searchGuitar){
 		for(Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ){
 			Guitar guitar = i.next();
-			String builder = searchGuitar.getBuilder();
+			String builder = searchGuitar.getBuilder().getValue().toLowerCase();
 			if ( (builder != null) && (!builder.equals("") && (!builder.equals(guitar.getBuilder())))) continue;
 			
 			String model = searchGuitar.getModel();
 			if ( (model != null) && (!model.equals("") && (!model.equals(guitar.getModel()))) ) continue;
 			
-			String type = searchGuitar.getType();
+			String type = searchGuitar.getType().getValue().toLowerCase();
 			if ( (type != null) && (!type.equals("") && (!type.equals(guitar.getType()))) ) continue;
 			
-			String backWood = searchGuitar.getBackWood();
+			String backWood = searchGuitar.getBackWood().getValue().toLowerCase();
 			if ( (backWood != null) && (!backWood.equals("") && (!backWood.equals(guitar.getBackWood()))) ) continue;
 			
-			String topWood = searchGuitar.getTopWood();
+			String topWood = searchGuitar.getTopWood().getValue().toLowerCase();
 			if ( (topWood != null) && (!topWood.equals("") && (!topWood.equals(guitar.getTopWood()))) ) continue;
 			
 			return guitar;

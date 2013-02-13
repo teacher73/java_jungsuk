@@ -24,8 +24,8 @@ public class FindGuitarTester {
 	    Inventory inventory = new Inventory();
 	    initializeInventory(inventory);
 	    
-	    Guitar whatErinLikes = new Guitar("",  "fender", "Stratocastor", 
-	                                      "electric", "Alder", "Alder", 0);
+	    Guitar whatErinLikes = new Guitar("",  Builder.FENDER, "Stratocastor", 
+	                                      Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 0);
 	    Guitar guitar = inventory.search(whatErinLikes);
 	    if (guitar != null) {
 	      System.out.println("Erin, you might like this " +
@@ -40,28 +40,17 @@ public class FindGuitarTester {
 	  }
 
 	  private static void initializeInventory(Inventory inventory) {
-	    inventory.addGuitar("11277", "Collings", "CJ", "acoustic",
-	                        "Indian Rosewood", "Sitka", 3999.95);
-	    inventory.addGuitar("V95693", "Fender", "Stratocastor", "electric",
-	                        "Alder", "Alder", 1499.95);
-	    inventory.addGuitar("V9512", "Fender", "Stratocastor", "electric",
-	                        "Alder", "Alder", 1549.95);
-	    inventory.addGuitar("122784", "Martin", "D-18", "acoustic",
-	                        "Mahogany", "Adirondack", 5495.95);
-	    inventory.addGuitar("76531", "Martin", "OM-28", "acoustic",
-	                        "Brazilian Rosewood", "Adriondack", 6295.95);
-	    inventory.addGuitar("70108276", "Gibson", "Les Paul", "electric",
-	                        "Mahogany", "Maple", 2295.95);
-	    inventory.addGuitar("82765501", "Gibson", "SG '61 Reissue",
-	                        "electric", "Mahogany", "Mahogany", 1890.95);
-	    inventory.addGuitar("77023", "Martin", "D-28", "acoustic",
-	                        "Brazilian Rosewood", "Adirondack", 6275.95);
-	    inventory.addGuitar("1092", "Olson", "SJ", "acoustic",
-	                        "Indian Rosewood", "Cedar", 12995.95);
-	    inventory.addGuitar("566-62", "Ryan", "Cathedral", "acoustic",
-	                        "Cocobolo", "Cedar", 8999.95);
-	    inventory.addGuitar("6 29584", "PRS", "Dave Navarro Signature",
-	                        "electric", "Mahogany", "Maple", 2100.95);
+	    inventory.addGuitar("11277", 	Builder.COLLINGS, 	"CJ", 						Type.ACOUSTIC, Wood.INDIAN_ROSEWOOD, 	Wood.SITKA, 	3999.95);
+	    inventory.addGuitar("V95693", 	Builder.FENDER, 	"Stratocastor",				Type.ELECTRIC, Wood.ALDER, 				Wood.ALDER, 	1499.95);
+	    inventory.addGuitar("V9512", 	Builder.FENDER, 	"Stratocastor", 			Type.ELECTRIC, Wood.ALDER, 				Wood.ALDER, 	1549.95);
+	    inventory.addGuitar("122784", 	Builder.MARTIN,		"D-18", 					Type.ACOUSTIC, Wood.MAHOGANY, 			Wood.ADIRONDACK,5495.95);
+	    inventory.addGuitar("76531", 	Builder.MARTIN,		"OM-28",					Type.ACOUSTIC, Wood.BRAZILIAN_ROSEWOOD, Wood.ADIRONDACK,6295.95);
+	    inventory.addGuitar("70108276", Builder.GIBSON, 	"Les Paul", 				Type.ELECTRIC, Wood.MAHOGANY, 			Wood.MAPLE, 	2295.95);
+	    inventory.addGuitar("82765501", Builder.GIBSON,		"SG '61 Reissue", 			Type.ELECTRIC, Wood.MAHOGANY,			Wood.MAHOGANY, 	1890.95);
+	    inventory.addGuitar("77023", 	Builder.MARTIN, 	"D-28", 					Type.ACOUSTIC, Wood.BRAZILIAN_ROSEWOOD, Wood.ADIRONDACK,6275.95);
+	    inventory.addGuitar("1092", 	Builder.OLSON, 		"SJ", 						Type.ACOUSTIC, Wood.INDIAN_ROSEWOOD, 	Wood.CEDAR, 	12995.95);
+	    inventory.addGuitar("566-62", 	Builder.RYAN, 		"Cathedral", 				Type.ACOUSTIC, Wood.COCOBOLO,			Wood.CEDAR, 	8999.95);
+	    inventory.addGuitar("6 29584", 	Builder.PRS,		"Dave Navarro Signature",	Type.ELECTRIC, Wood.MAHOGANY, 			Wood.MAPLE, 	2100.95);
 	  }
 	}
 
